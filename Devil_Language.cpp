@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 
-class Node //µ¥¸ö½ÚµãÉùÃ÷£¬°üº¬±àºÅºÍ×ÖÄ¸ 
+class Node //å•ä¸ªèŠ‚ç‚¹å£°æ˜ï¼ŒåŒ…å«ç¼–å·å’Œå­—æ¯ 
 {
 public:
 
@@ -14,7 +14,7 @@ public:
 	}
 };
 
-class Stack//Õ»µÄÉùÃ÷ 
+class Stack//æ ˆçš„å£°æ˜ 
 {
 public:
 	Node *top;
@@ -148,16 +148,16 @@ public:
 			c=temp->word;
 			switch(c)
 			{
-				case 't':cout<<"Ìì";break;
-				case 'd':cout<<"µØ";break;
-				case 's':cout<<"ÉÏ";break;
-				case 'a':cout<<"Ò»Ö»";break;
-				case 'e':cout<<"¶ì";break;
-				case 'z':cout<<"×·";break;
-				case 'g':cout<<"¸Ï";break;
-				case 'x':cout<<"ÏÂ";break;
-				case 'n':cout<<"µ°";break;
-				case 'h':cout<<"ºŞ";break;
+				case 't':cout<<"å¤©";break;
+				case 'd':cout<<"åœ°";break;
+				case 's':cout<<"ä¸Š";break;
+				case 'a':cout<<"ä¸€åª";break;
+				case 'e':cout<<"é¹…";break;
+				case 'z':cout<<"è¿½";break;
+				case 'g':cout<<"èµ¶";break;
+				case 'x':cout<<"ä¸‹";break;
+				case 'n':cout<<"è›‹";break;
+				case 'h':cout<<"æ¨";break;
 				default:
 					cout<<c;break; 
 			}
@@ -244,14 +244,14 @@ void deal(Stack &S)
 
 int main()
 {
-	Stack S;//SÎªÔ­Ê¼Õ» 
+	Stack S;//Sä¸ºåŸå§‹æ ˆ 
 	Queue Q;
 	char c,ch;
 	
 	string s;
-	cout<<"ÇëÊäÈëÄ§ÍõÓïÑÔ"<<endl;
+	cout<<"è¯·è¾“å…¥é­”ç‹è¯­è¨€"<<endl;
 	cin>>s;
-	//ÅĞ¶ÏÄ§ÍõÓïÑÔÊÇ·ñ¿ÉĞĞ 
+	//åˆ¤æ–­é­”ç‹è¯­è¨€æ˜¯å¦å¯è¡Œ 
 {
 	bool flag=true;
 	int lbracket = 0,rbracket = 0;
@@ -269,7 +269,7 @@ int main()
 	}
 	if(lbracket!=rbracket)
 	{			
-		cout<<"À¨ºÅ²»Æ¥Åä"<<endl;
+		cout<<"æ‹¬å·ä¸åŒ¹é…"<<endl;
 		return 0;
 	}
 	for(int i = n-1; i>=0; i--)
@@ -310,11 +310,11 @@ int main()
 		}
 	}
 	
-	cout<<"³õÊ¼Ä§ÍõÓïÑÔ½âÊÍÎª:"<<endl;
+	cout<<"åˆå§‹é­”ç‹è¯­è¨€è§£é‡Šä¸º:"<<endl;
 	Q.OutputAll();
 	cout<<endl;
 	
-	cout<<"ºº»¯Ä§ÍõÓïÑÔ½âÊÍÎª:"<<endl;
+	cout<<"æ±‰åŒ–é­”ç‹è¯­è¨€è§£é‡Šä¸º:"<<endl;
 	Q.Translate(); 
 	cout<<endl;
 	
